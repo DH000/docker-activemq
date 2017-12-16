@@ -7,6 +7,7 @@ RUN cd /usr/local && tar -zxvf apache-activemq-5.15.2-bin.tar.gz && rm -f apache
 ENV ACTIVEMQ_HOME /usr/local/activemq
 ENV ACTIVEMQ_DATA ${ACTIVEMQ_HOME}/data
 
+RUN java -version
 RUN /usr/local/activemq/bin/activemq status
 
 VOLUME /usr/local/activemq/conf
